@@ -1,8 +1,13 @@
 const mongoose = require('mongoose')
 
+const options = {
+  dbName: 'Expatswap' // Specify custom database name using options
+};
+
+
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect("mongodb+srv://Remi Daniel:Youngest247.@remicluster.kyndevf.mongodb.net/")
+    const conn = await mongoose.connect(process.env.MONGO_URI, options)
 
     console.log(`MongoDB Connected: ${conn.connection.host}`.cyan.underline)
   } catch (error) {
