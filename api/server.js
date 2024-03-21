@@ -10,12 +10,10 @@ const corsOptions = {
   origin: true,
   optionsSuccessStatus: 200, // Some legacy browsers choke on 204
 };
-
+const app = express();
 app.use(cors(corsOptions));
 
 connectDB();
-
-const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
