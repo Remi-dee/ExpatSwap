@@ -1,6 +1,6 @@
 # Expatswap User Management Module
 
-Expatswap User Management Module is a web application developed for managing user data. It allows users to create new accounts and view a paginated table of existing users. This project is built using Node.js for the backend, Next.js for the frontend, and MongoDB as the database.
+Expatswap User Management Module is a web application developed for managing user data. It allows users to create new accounts and view a paginated table of existing users. This project is built using Node.js for the backend, Next.js for the frontend, JWT Auth for authentication and MongoDB as the database.
 
 ## Features
 
@@ -15,6 +15,7 @@ Expatswap User Management Module is a web application developed for managing use
   - Node.js
   - Express.js
   - MongoDB
+  - JWT auth
 - Frontend:
   - Next.js
   - React.js
@@ -25,13 +26,22 @@ Expatswap User Management Module is a web application developed for managing use
 To run the application locally, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/your-username/expatswap-user-management.git`
-2. Navigate to the project directory: `cd expatswap-user-management`
+2. Navigate to the project directory: `cd expatswap`
 3. Install dependencies:
    ```bash
    # Install backend dependencies
-   cd backend
+   cd api
    npm install
 
    # Install frontend dependencies
-   cd ../frontend
+   cd ../client
    npm install
+
+   # Create a .env file in the backend directory and add the following variables:
+
+   NODE_ENV = development
+   PORT = 5000
+   MONGO_URI = your_mongodb_uri
+   JWT_SECRET = your JWT token
+      
+
