@@ -35,7 +35,12 @@ const UserCreation = () => {
 
   return (
     <div className="container flex flex-col text-center mx-auto p-4">
-      <h1 className="text-3xl font-semibold mb-4">User Creation</h1>
+      <div className="container mx-auto p-4">
+        <h1 className="text-5xl font-semibold mb-4 text-center">
+          Welcome to ExpatSwap!
+        </h1>
+      </div>
+      <h1 className="text-3xl font-semibold mb-6">Kindly Enter Your Details</h1>
       <UserForm
         onSubmit={handleSubmit}
         formData={formData}
