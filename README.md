@@ -4,13 +4,15 @@ Expatswap User Management Module is a web application developed for managing use
 
 ## Features
 
-- User creation: Allows users to create new accounts with their personal information including first name, last name, phone number, email, password, and date of birth.
-- User table: Displays a paginated table of existing users, showing their first name, last name, phone number, email, and date of birth.
-- Client-side validation: Provides client-side validation for email format and password requirements during user creation.
-- Responsive design: The application is responsive and works well on both desktop and mobile devices.
+- [x] User creation: Allows users to create new accounts with their personal information including first name, last name, phone number, email, password, and date of birth.
+- [x] User table: Displays a paginated table of existing users, showing their first name, last name, phone number, email, and date of birth.
+- [x] Filter User's Data: Allow users to filter the list of users by a range of date of birth. For instance, allow users to filter and view all users whose date of birth falls between a specified range (e.g., 1st Jan 2001 and 1st Jan 2006).
+- [x] Client-side validation: Provides client-side validation for email format and password requirements during user creation.
+- [x] Responsive design: The application is responsive and works well on both desktop and mobile devices.
 
 ## Demo
-![expatSwap4](https://github.com/Remi-dee/expatswap/assets/96704300/f221c202-c98d-4a48-a804-3f706b7862a7)
+### Filter Users' Data
+![expatSwap5](https://github.com/Remi-dee/expatswap/assets/96704300/5f6d3321-2bfc-4d42-a4de-6cb073411331)
 
 ## Validation
 ![expatSwap3](https://github.com/Remi-dee/expatswap/assets/96704300/8c322afa-a6a4-4e7e-892d-b83dcf1f81f5)
@@ -36,12 +38,14 @@ Expatswap User Management Module is a web application developed for managing use
 ## Screenshots
 
 ### Create User
-![image](https://github.com/Remi-dee/expatswap/assets/96704300/77099e8e-0796-47a8-8f84-490ebb3f3a2f)
+![image](https://github.com/Remi-dee/expatswap/assets/96704300/92971b6d-8697-4b46-8a8f-62c314e8b616)
+
 
 
 
 ### Users Table
-![image](https://github.com/Remi-dee/expatswap/assets/96704300/c50f8709-5215-4ade-8260-13de19555654)
+![image](https://github.com/Remi-dee/expatswap/assets/96704300/118c686f-396f-48a9-83ff-819906e426bc)
+
 
 
 ## Setup
