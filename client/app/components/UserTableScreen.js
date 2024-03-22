@@ -91,7 +91,7 @@ const UserTable = () => {
               ))}
             </div>
           ) : (
-            <div>No user found!</div>
+            <div className="mx-auto ml-4">No user found!</div>
           )}
         </tbody>
       </table>

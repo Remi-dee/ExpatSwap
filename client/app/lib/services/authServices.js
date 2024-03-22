@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 
-const API_URL = "https://expatswap.onrender.com//users";
+const API_URL = "https://expatswap.onrender.com/users";
 
 // Register user
 const createUser = async (userData) => {
