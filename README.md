@@ -9,6 +9,13 @@ Expatswap User Management Module is a web application developed for managing use
 - Client-side validation: Provides client-side validation for email format and password requirements during user creation.
 - Responsive design: The application is responsive and works well on both desktop and mobile devices.
 
+## Demo
+![expatSwap](https://github.com/Remi-dee/expatswap/assets/96704300/51cd09a1-8e67-4bd2-ac1f-39270f6b31b4)
+
+## Expatswap Database Structure and View(Mongo Db)
+![expatSwap2](https://github.com/Remi-dee/expatswap/assets/96704300/55b0d3bc-9af5-4790-801e-4f45bdc1f0e5)
+
+
 ## Technologies Used
 
 - Backend:
@@ -20,6 +27,18 @@ Expatswap User Management Module is a web application developed for managing use
   - Next.js
   - React.js
   - Tailwind CSS
+ 
+
+## Screenshots
+
+### Create User
+![image](https://github.com/Remi-dee/expatswap/assets/96704300/77099e8e-0796-47a8-8f84-490ebb3f3a2f)
+
+
+
+### Fetch Users
+![image](https://github.com/Remi-dee/expatswap/assets/96704300/c50f8709-5215-4ade-8260-13de19555654)
+
 
 ## Setup
 
