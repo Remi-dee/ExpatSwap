@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 
 const UserCreation = () => {
   const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
   // State for form fields
   const [formData, setFormData] = useState({
     firstName: "",
@@ -28,7 +29,9 @@ const UserCreation = () => {
     e.preventDefault();
     // Perform form validation before submitting
     if (validateForm(formData)) {
-      await createUser(formData);
+      setIsLoading(true);
+      const userCreated = await createUser(formData);
+      if (userCreated) setIsLoading(false);
       router.push("/users");
     }
   };
@@ -45,6 +48,7 @@ const UserCreation = () => {
         onSubmit={handleSubmit}
         formData={formData}
         onChange={handleChange}
+        loading={isLoading}
       />
     </div>
   );

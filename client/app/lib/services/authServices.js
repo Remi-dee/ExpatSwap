@@ -13,7 +13,7 @@ const createUser = async (userData) => {
     } else {
       false;
     }
-    alert("You've successfully signed in" + response.data);
+    alert("You've successfully signed in");
     return response.data;
   } catch (error) {
     alert("Unable to create user: " + error.message);
