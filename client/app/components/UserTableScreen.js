@@ -16,7 +16,7 @@ const UserTable = () => {
 
   useEffect(() => {
     const userData = JSON.parse(localStorage.getItem("user"));
-    const users = JSON.parse(localStorage.getItem("users"));
+
     const token = userData.token;
 
     const fetchData = async () => {
