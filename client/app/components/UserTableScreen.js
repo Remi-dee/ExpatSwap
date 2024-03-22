@@ -11,16 +11,8 @@ const UserTable = () => {
 
   const [currentUser, setCurrentUser] = useState("");
   const [loading, setLoading] = useState(true);
-  const userData = JSON.parse(localStorage.getItem("user"));
 
   const token = userData.token;
-
-  console.log(users);
-  const config = {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  };
 
   useEffect(() => {
     const userData = JSON.parse(localStorage.getItem("user"));
