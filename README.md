@@ -10,7 +10,11 @@ Expatswap User Management Module is a web application developed for managing use
 - Responsive design: The application is responsive and works well on both desktop and mobile devices.
 
 ## Demo
-![expatSwap](https://github.com/Remi-dee/expatswap/assets/96704300/51cd09a1-8e67-4bd2-ac1f-39270f6b31b4)
+![expatSwap4](https://github.com/Remi-dee/expatswap/assets/96704300/f221c202-c98d-4a48-a804-3f706b7862a7)
+
+## Validation
+![expatSwap3](https://github.com/Remi-dee/expatswap/assets/96704300/8c322afa-a6a4-4e7e-892d-b83dcf1f81f5)
+
 
 ## Expatswap Database Structure and View(Mongo Db)
 ![expatSwap2](https://github.com/Remi-dee/expatswap/assets/96704300/55b0d3bc-9af5-4790-801e-4f45bdc1f0e5)
@@ -36,7 +40,7 @@ Expatswap User Management Module is a web application developed for managing use
 
 
 
-### Fetch Users
+### Users Table
 ![image](https://github.com/Remi-dee/expatswap/assets/96704300/c50f8709-5215-4ade-8260-13de19555654)
 
 
