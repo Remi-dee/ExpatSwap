@@ -12,13 +12,14 @@ const UserTable = () => {
   const [currentUser, setCurrentUser] = useState("");
   const [loading, setLoading] = useState(true);
 
-  const token = userData.token;
-
   useEffect(() => {
+    let userData;
     if (typeof window !== "undefined") {
-      const userData = JSON.parse(localStorage.getItem("user"));
+      userData = JSON.parse(localStorage.getItem("user"));
+    } else {
+      false;
     }
-    const token = userData.token;
+    const token = userData?.token;
 
     const fetchData = async () => {
       if (!userData) {

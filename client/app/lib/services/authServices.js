@@ -10,6 +10,8 @@ const createUser = async (userData) => {
 
     if (typeof window !== "undefined" && response.data) {
       localStorage.setItem("user", JSON.stringify(response.data));
+    } else {
+      false;
     }
     alert("You've successfully signed in" + response.data);
     return response.data;
@@ -24,6 +26,8 @@ const login = async (userData) => {
 
   if (typeof window !== "undefined" && response.data) {
     localStorage.setItem("user", JSON.stringify(response.data));
+  } else {
+    false;
   }
 
   return response.data;
@@ -48,6 +52,8 @@ async function getUsers(token) {
 const logout = () => {
   if (typeof window !== "undefined" && response.data) {
     localStorage.removeItem("user");
+  } else {
+    false;
   }
 };
 
