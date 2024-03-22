@@ -46,7 +46,9 @@ async function getUsers(token) {
 
 // Logout user
 const logout = () => {
-  localStorage.removeItem("user");
+  if (typeof window !== "undefined" && response.data) {
+    localStorage.removeItem("user");
+  }
 };
 
 export { createUser, logout, login, getUsers };
