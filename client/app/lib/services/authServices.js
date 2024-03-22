@@ -37,7 +37,7 @@ async function getUsers(token) {
     },
   };
 
-  const { data } = await axios.get(`${API_URL}/me`, config);
+  const { data } = await axios.get(`${API_URL}/allUsers`, config);
   // alert("Users successfully retrieved");
   const usersFromDb = data;
 

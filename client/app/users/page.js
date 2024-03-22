@@ -2,8 +2,6 @@
 
 import { useRouter } from "next/navigation";
 import UserTable from "../components/UserTableScreen";
-import { useEffect, useState } from "react";
-import { getUsers } from "../lib/services/authServices";
 
 export default function Home() {
   return (
