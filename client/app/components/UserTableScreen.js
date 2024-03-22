@@ -81,7 +81,7 @@ const UserTable = () => {
 
           {console.log(users)}
 
-          {[users].map((user) => {
+          {users.map((user) => {
             return (
               <tr key={user.id}>
                 <td className="border border-gray-300 px-4 py-2">
