@@ -29,24 +29,19 @@ const login = async (userData) => {
   return response.data;
 };
 
-function useUsersSession() {
-  const [users, setUsers] = useState([]);
-  async function getUsers(token) {
-    const config = {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    };
+// Get Users
+async function getUsers(token) {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
 
-    const { data } = await axios.get(`${API_URL}/me`, config);
-    // alert("Users successfully retrieved");
-    const usersFromDb = data;
-    setUsers(usersFromDb);
-    if (usersFromDb) localStorage.setItem("users", JSON.stringify(usersFromDb));
-    return usersFromDb;
-  }
+  const { data } = await axios.get(`${API_URL}/me`, config);
+  // alert("Users successfully retrieved");
+  const usersFromDb = data;
 
-  return { users, getUsers };
+  return usersFromDb;
 }
 
 // Logout user
@@ -54,4 +49,4 @@ const logout = () => {
   localStorage.removeItem("user");
 };
 
-export { createUser, logout, login, useUsersSession };
+export { createUser, logout, login, getUsers };

@@ -2,15 +2,25 @@
 
 import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
-import { getUsers, useUsersSession } from "../lib/services/authServices";
+import { getUsers } from "../lib/services/authServices";
+import axios from "axios";
+const API_URL = "https://expatswap.onrender.com/users";
 
 const UserTable = () => {
-  const [users1, setUsers1] = useState([]);
-  const { users, getUsers } = useUsersSession();
+  const [users, setUsers] = useState([]);
+
   const [currentUser, setCurrentUser] = useState("");
   const [loading, setLoading] = useState(true);
+  const userData = JSON.parse(localStorage.getItem("user"));
+
+  const token = userData.token;
 
   console.log(users);
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
 
   useEffect(() => {
     const userData = JSON.parse(localStorage.getItem("user"));
@@ -24,10 +34,12 @@ const UserTable = () => {
       } else {
         setCurrentUser(userData.firstName);
         try {
-          const token = userData.token;
-          await getUsers(token);
-          setLoading(false);
-          setUsers1(users);
+          const usersFromDb = await getUsers(token);
+
+          if (usersFromDb) {
+            setLoading(false);
+            setUsers(usersFromDb);
+          }
         } catch (error) {
           console.error("Error fetching users:", error);
         }
@@ -35,15 +47,15 @@ const UserTable = () => {
     };
 
     fetchData();
-  }, [users]);
+  }, []);
 
-  // if (loading) {
-  //   return <div>Loading...</div>; // Render loading indicator when loading is true
-  // }
+  if (loading) {
+    return <div>Loading...</div>; // Render loading indicator when loading is true
+  }
 
-  // if (!users1 || users1.length === 0) {
-  //   return <div>No users found.</div>; // Render message when no users are available
-  // }
+  if (!users || users.length === 0) {
+    return <div>No users found.</div>; // Render message when no users are available
+  }
 
   return (
     <div className="container  lg:p-4 overflow-x-auto">
@@ -63,36 +75,33 @@ const UserTable = () => {
             <th className="border border-gray-300 px-4 py-2">Date of Birth</th>
           </tr>
         </thead>
+
         <tbody>
           {/* Render user data here */}
 
           {console.log(users)}
 
-          {users.length > 0 ? (
-            <div>
-              {users.map((user) => (
-                <tr key={user.id}>
-                  <td className="border border-gray-300 px-4 py-2">
-                    {user.firstName}
-                  </td>
-                  <td className="border border-gray-300 px-4 py-2">
-                    {user.lastName}
-                  </td>
-                  <td className="border border-gray-300 px-4 py-2">
-                    {user.phoneNumber}
-                  </td>
-                  <td className="border border-gray-300 px-4 py-2">
-                    {user.email}
-                  </td>
-                  <td className="border border-gray-300 px-4 py-2">
-                    {user.dateOfBirth}
-                  </td>
-                </tr>
-              ))}
-            </div>
-          ) : (
-            <div className="mx-auto ml-4">No user found!</div>
-          )}
+          {[users].map((user) => {
+            return (
+              <tr key={user.id}>
+                <td className="border border-gray-300 px-4 py-2">
+                  {user.firstName}
+                </td>
+                <td className="border border-gray-300 px-4 py-2">
+                  {user.lastName}
+                </td>
+                <td className="border border-gray-300 px-4 py-2">
+                  {user.phoneNumber}
+                </td>
+                <td className="border border-gray-300 px-4 py-2">
+                  {user.email}
+                </td>
+                <td className="border border-gray-300 px-4 py-2">
+                  {user.dateOfBirth}
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
