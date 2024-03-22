@@ -56,6 +56,9 @@ To run the application locally, follow these steps:
 1. Clone the repository: `git clone https://github.com/your-username/expatswap-user-management.git`
 2. Navigate to the project directory: `cd expatswap`
 3. Install dependencies:
+
+*Kindly note that you don't necessarily need to install the backend as it has already been deployed to a live link and has been integrated with the app. Hence, installing the frontend is enough to get the app running on your machine*
+   
    ```bash
    # Install backend dependencies
    cd api
@@ -66,10 +69,12 @@ To run the application locally, follow these steps:
    npm install
 
    # Create a .env file in the backend directory and add the following variables:
-
    NODE_ENV = development
    PORT = 5000
    MONGO_URI = your_mongodb_uri
    JWT_SECRET = your JWT token
+
+   # Run the app
+   npm run dev
       
 
