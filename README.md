@@ -1,6 +1,7 @@
 # Expatswap User Management Module
 
 Expatswap User Management Module is a web application developed for managing user data. It allows users to create new accounts and view a paginated table of existing users. This project is built using Node.js for the backend, Next.js for the frontend, JWT Auth for authentication and MongoDB as the database.
+### [Visit App](https://expatswap-brown.vercel.app/)
 
 ## Features
 
