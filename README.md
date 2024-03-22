@@ -20,6 +20,18 @@ Expatswap User Management Module is a web application developed for managing use
   - Next.js
   - React.js
   - Tailwind CSS
+ 
+
+## Screenshots
+
+### Create User
+![image](https://github.com/Remi-dee/expatswap/assets/96704300/77099e8e-0796-47a8-8f84-490ebb3f3a2f)
+
+
+
+### Fetch Users
+![image](https://github.com/Remi-dee/expatswap/assets/96704300/c50f8709-5215-4ade-8260-13de19555654)
+
 
 ## Setup
 
